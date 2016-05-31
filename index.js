@@ -1,1 +1,1 @@
-module.exports = require("./dist/Closest");
+module.exports = require("./src/Closest");
