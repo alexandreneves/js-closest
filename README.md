@@ -24,5 +24,5 @@ $ npm i @aneves/js-closest
 + value (string)
 
 ```javascript
-    const closest = Closest(el, 'tag', 'a');
+const closest = Closest(el, 'tag', 'a');
 ```
