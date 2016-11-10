@@ -7,7 +7,7 @@ Method to return closest matching element.
 ## INSTALLATION
 
 ```sh
-$ npm i @aneves/js-closest
+$ npm install --save @aneves/js-closest
 ```
 
 

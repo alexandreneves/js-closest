@@ -1,6 +1,5 @@
-const Closest = function (el, target, value) {
-    if (!el) return false;
-    if (el.tagName.toLowerCase() === 'body') return null;
+export default function (el, target, value) {
+    if (!el || el.tagName.toLowerCase() === 'body') return null;
 
     let v;
 
@@ -18,8 +17,5 @@ const Closest = function (el, target, value) {
             console.error('Closest - target unknown');
     }
 
-    if (value === v) return el; // found
-    return Closest(el.parentNode, target, value); // not found, recurse
+    return value === v ? el : Closest(el.parentNode, target, value); // found? no? recurse
 };
-
-export default Closest;
