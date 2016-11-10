@@ -1,4 +1,4 @@
-export default function (el, target, value) {
+const Closest = function (el, target, value) {
     if (!el || el.tagName.toLowerCase() === 'body') return null;
 
     let v;
@@ -19,3 +19,5 @@ export default function (el, target, value) {
 
     return value === v ? el : Closest(el.parentNode, target, value); // found? no? recurse
 };
+
+export default Closest;

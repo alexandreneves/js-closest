@@ -3,8 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
-exports.default = function (el, target, value) {
+var Closest = function Closest(el, target, value) {
     if (!el || el.tagName.toLowerCase() === 'body') return null;
 
     var v = void 0;
@@ -26,4 +25,4 @@ exports.default = function (el, target, value) {
     return value === v ? el : Closest(el.parentNode, target, value); // found? no? recurse
 };
 
-;
+exports.default = Closest;
