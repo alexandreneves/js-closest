@@ -1,4 +1,6 @@
-const Closest = function(el, selector) {
+const Closest = function(el, selector, counter) {
+    counter = counter === undefined ? 0 : counter + 1;
+
     if (
         el === undefined ||
         selector === undefined ||
@@ -13,12 +15,12 @@ const Closest = function(el, selector) {
     if (
         (firstChar === '#' && el.id === temp) ||
         (firstChar === '.' && el.classList.contains(temp)) ||
-        el.tagName.toLowerCase() === selector
+        (counter > 0 && el.tagName.toLowerCase() === selector)
     ) {
         return el;
     }
 
-    return Closest(el.parentNode, selector);
+    return Closest(el.parentNode, selector, counter);
 };
 
 export default Closest;
