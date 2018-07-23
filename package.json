@@ -1,6 +1,6 @@
 {
   "name": "@aneves/js-closest",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "author": "Alexandre Neves <adn.denied@gmail.com>",
   "description": "Method to return closest matching element.",
   "homepage": "https://github.com/alexandreneves/js-closest",
