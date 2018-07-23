@@ -1,6 +1,6 @@
 # JS-CLOSEST
 
-Method to return closest matching element.
+Method to return closest (parent) matching element.
 
 ## INSTALLATION
 
