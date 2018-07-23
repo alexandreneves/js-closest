@@ -2,27 +2,16 @@
 
 Method to return closest matching element.
 
-
-
 ## INSTALLATION
 
 ```sh
 $ npm install --save @aneves/js-closest
 ```
 
-
-
 ## USAGE
 
-```Closest(el, target, value)```
-
-+ el (obj)
-+ target (string)
-    + tag
-    + id
-    + class
-+ value (string)
-
 ```javascript
-const closest = Closest(el, 'tag', 'a');
+import Closest from '@aneves/js-closest';
+
+Closest(el, '#id');
 ```

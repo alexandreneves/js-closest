@@ -1,23 +1,24 @@
-const Closest = function (el, target, value) {
-    if (!el || el.tagName.toLowerCase() === 'body') return null;
-
-    let v;
-
-    switch(target) {
-        case 'tag':
-            v = el.tagName.toLowerCase();
-            break;
-        case 'id':
-            v = el.id;
-            break;
-        case 'class':
-            v = el.className;
-            break;
-        default:
-            console.error('Closest - target unknown');
+const Closest = function(el, selector) {
+    if (
+        el === undefined ||
+        selector === undefined ||
+        el.tagName.toLowerCase() === 'body'
+    ) {
+        return false;
     }
 
-    return value === v ? el : Closest(el.parentNode, target, value); // found? no? recurse
+    let temp = selector.substr(1);
+    let firstChar = selector.charAt(0);
+
+    if (
+        (firstChar === '#' && el.id === temp) ||
+        (firstChar === '.' && el.classList.contains(temp)) ||
+        el.tagName.toLowerCase() === selector
+    ) {
+        return el;
+    }
+
+    return Closest(el.parentNode, selector);
 };
 
 export default Closest;
